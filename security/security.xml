@@ -1,0 +1,8 @@
+<odoo>
+    <record id="product" model="product.product">
+        <field name="name">Producto</field>
+    </record>
+    <record id="order" model="pos.order">
+        <field name="name">Orden de compra</field>
+    </record>
+</odoo>

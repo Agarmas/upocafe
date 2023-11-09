@@ -1,0 +1,9 @@
+<odoo>
+    <record id="action_orders" model="ir.actions.act_window">
+        <field name="name">Ordenes de venta</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_orders" name="Ordenes de venta" parent="menu_cafeupo" action="action_orders" sequence="10"/>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_cafeupo_products" model="ir.actions.act_window">
+        <field name="name">Productos</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cafeupo_products" name="Productos" parent="menu_cafeupo" action="action_cafeupo_products" sequence="10"/>
+</odoo>
