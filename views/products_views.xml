@@ -1,6 +1,6 @@
 <odoo>
     <record id="action_cafeupo_products" model="ir.actions.act_window">
-        <field name="name">Productos</field>
+        <field name="name">Productos e Ingredientes</field>
         <field name="res_model">product.template</field>
         <field name="view_mode">tree,form</field>
     </record>
