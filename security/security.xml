@@ -1,8 +1,14 @@
 <odoo>
-    <record id="product" model="product.product">
+    <record id="product_product" model="product.product">
+        <field name="name">Variante de Producto</field>
+    </record>
+    <record id="product_template" model="product.template">
         <field name="name">Producto</field>
     </record>
-    <record id="order" model="pos.order">
-        <field name="name">Orden de compra</field>
+    <record id="mrp_bom" model="mrp.bom">
+        <field name="name">Receta</field>
+    </record>
+    <record id="mrp_bom" model="mrp.bom">
+        <field name="name">Ingrediente de Receta</field>
     </record>
 </odoo>

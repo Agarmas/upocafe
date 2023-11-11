@@ -18,7 +18,7 @@
     </record>
 
     <menuitem id="menu_cafeupo_products_main" name="Productos" parent="menu_cafeupo"/>
-    <menuitem id="menu_cafeupo_products" name="Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_products"/>
+    <menuitem id="menu_cafeupo_products" name="Productos e Ingredientes" parent="menu_cafeupo_products_main" action="action_cafeupo_products"/>
     <menuitem id="menu_cafeupo_product_variants" name="Variantes de Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_product_variants"/>
-    <menuitem id="menu_cafeupo_product_recipes" name="Reveras de Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_product_recipes"/>
+    <menuitem id="menu_cafeupo_product_recipes" name="Recetas de Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_product_recipes"/>
 </odoo>
