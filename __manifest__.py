@@ -16,13 +16,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'product', 'point_of_sale', 'account'],
+    'depends': ['base', 'product', 'point_of_sale', 'mrp'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
-        'views/orders_views.xml',
         'views/products_views.xml',
     ],
     # only loaded in demonstration mode

@@ -1,10 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="action_cafeupo_products" model="ir.actions.act_window">
         <field name="name">Productos</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_cafeupo_product_variants" model="ir.actions.act_window">
+        <field name="name">Variantes de Productos</field>
         <field name="res_model">product.product</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_cafeupo_products" name="Productos" parent="menu_cafeupo" action="action_cafeupo_products" sequence="10"/>
+    <record id="action_cafeupo_product_recipes" model="ir.actions.act_window">
+        <field name="name">Recetas de Productos</field>
+        <field name="res_model">mrp.bom</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cafeupo_products_main" name="Productos" parent="menu_cafeupo"/>
+    <menuitem id="menu_cafeupo_products" name="Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_products"/>
+    <menuitem id="menu_cafeupo_product_variants" name="Variantes de Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_product_variants"/>
+    <menuitem id="menu_cafeupo_product_recipes" name="Reveras de Productos" parent="menu_cafeupo_products_main" action="action_cafeupo_product_recipes"/>
 </odoo>
