@@ -1,4 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_client,access.res.partner,res.model_partner,base.group_user,1,1,1,1
+access_provider,access.res.partner,res.model_partner,base.group_user,1,1,1,1
+access_reposition,access.purchase.order,purchase.model_order,base.group_user,1,1,1,1
 access_product_product,access.product.product,product.model_product_product,base.group_user,1,1,1,1
 access_product_template,access.product.template,product.model_product_template,base.group_user,1,1,1,1
 access_mrp_bom,access.mrp.bom,mrp.model_mrp_bom,base.group_user,1,1,1,1
