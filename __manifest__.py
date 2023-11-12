@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Cafeupo",
+    'name': "UPOCafe",
 
     'summary': """Gestion de máquinas de café""",
 
@@ -16,7 +16,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'product', 'point_of_sale', 'mrp'],
+    'depends': ['base', 'product', 'mrp'],
 
     # always loaded
     'data': [
@@ -26,6 +26,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [   
+        'data/demo_data.xml'
     ],
     'installable': True,
     'application': True,
