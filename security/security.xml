@@ -11,4 +11,7 @@
     <record id="mrp_bom" model="mrp.bom.line">
         <field name="name">Ingrediente de Receta</field>
     </record>
+    <record id="upocafe_payment" model="upocafe.payment">
+        <field name="name">Pago de un conjunto de productos</field>
+    </record>
 </odoo>

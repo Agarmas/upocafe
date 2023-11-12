@@ -1,0 +1,41 @@
+<odoo>
+
+    <record id="view_upocafe_payment_tree" model="ir.ui.view">
+        <field name="name">upocafe.payment.tree</field>
+        <field name="model">upocafe.payment</field>
+        <field name="arch" type="xml">
+            <tree string="Pagos de compras">
+                <field name="partner_id"/>
+                <field name="amount"/>
+                <field name="date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_upocafe_payment_form" model="ir.ui.view">
+        <field name="name">upocafe.payment.form</field>
+        <field name="model">upocafe.payment</field>
+        <field name="arch" type="xml">
+            <form string="Pago de compra">
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="amount"/>
+                        <field name="date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_upocafe_payment" model="ir.actions.act_window">
+        <field name="name">Pagos de compras</field>
+        <field name="res_model">upocafe.payment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_upocafe_payment_tree"/>
+    </record>
+    
+
+    <menuitem id="menu_upocafe_payments_main" name="Pagos" parent="menu_upocafe"/>
+    <menuitem id="menu_upocafe_payments" name="Pagos de compras" parent="menu_upocafe_payments_main" action="action_upocafe_payment"/>
+</odoo>
