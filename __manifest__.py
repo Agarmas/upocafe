@@ -25,7 +25,7 @@
         'views/products_views.xml',
         'views/payment_methods_views.xml',
         'views/cancelations_views.xml',
-		'views/reparations_views.xml',
+        'views/reparations_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [   
