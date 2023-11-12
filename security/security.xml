@@ -8,7 +8,7 @@
     <record id="mrp_bom" model="mrp.bom">
         <field name="name">Receta</field>
     </record>
-    <record id="mrp_bom" model="mrp.bom">
+    <record id="mrp_bom" model="mrp.bom.line">
         <field name="name">Ingrediente de Receta</field>
     </record>
 </odoo>

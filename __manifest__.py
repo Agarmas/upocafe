@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Cafeupo",
+    'name': "UPOCafe",
 
     'summary': """Gestion de máquinas de café""",
 
@@ -26,6 +26,7 @@
     ],
     # only loaded in demonstration mode
     'demo': [   
+        'data/demo_data.xml'
     ],
     'installable': True,
     'application': True,
