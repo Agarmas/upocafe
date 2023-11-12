@@ -11,4 +11,13 @@
     <record id="mrp_bom" model="mrp.bom.line">
         <field name="name">Ingrediente de Receta</field>
     </record>
+    <record id="upocafe_payment_method" model="upocafe.payment_method">
+        <field name="name">Método de pago</field>
+    </record>
+    <record id="upocafe_cancelation" model="upocafe.cancelation">
+        <field name="name">Cancelación de pago</field>
+    </record>
+        <record id="upocafe_reparation" model="upocafe.reparation">
+        <field name="name">Reparaciones</field>
+    </record>
 </odoo>
