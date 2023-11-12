@@ -19,5 +19,7 @@
     </record>
         <record id="upocafe_reparation" model="upocafe.reparation">
         <field name="name">Reparaciones</field>
+    <record id="upocafe_payment" model="upocafe.payment">
+        <field name="name">Pago de un conjunto de productos</field>
     </record>
 </odoo>

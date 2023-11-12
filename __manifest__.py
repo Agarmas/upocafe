@@ -6,7 +6,7 @@
 
     'description': """Gestion de las máquinas, productos, reparaciones, proveedores...""",
 
-    'author': "TSI - UPO",
+    'author': "Marcos Villareal Muñoz, Antonio Moreno Mendez, Pablo Sanchez Troncoso, Antonio Garrido Massé",
     'website': "https://www.upo.es",
 
     # Categories can be used to filter modules in modules listing

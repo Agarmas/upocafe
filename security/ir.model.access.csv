@@ -6,3 +6,4 @@ access_mrp_bom_line,access.mrp.bom.line,mrp.model_mrp_bom_line,base.group_user,1
 access_upocafe_payment_method,access.upocafe.payment_method,upocafe.model_upocafe_payment_method,base.group_user,1,1,1,1
 access_upocafe_cancelation,access.upocafe.cancelation,upocafe.model_upocafe_cancelation,base.group_user,1,1,1,1
 access_upocafe_reparation,access.upocafe.reparation,upocafe.model_upocafe_reparation,base.group_user,1,1,1,1
+access_upocafe_payment,access.upocafe.payment,upocafe.model_upocafe_payment,base.group_user,1,1,1,1
