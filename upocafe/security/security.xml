@@ -1,0 +1,11 @@
+<odoo>
+    <record id="upocafe_machine" model="upocafe.machine">
+        <field name="name">Maquina de cafe</field>
+    </record>
+    <record id="upocafe_status" model="upocafe.status">
+        <field name="name">Estado de una maquina</field>
+    </record>
+    <record id="hr_employee" model="hr.employees">
+        <field name="name">Empleados</field>
+    </record>
+</odoo>
