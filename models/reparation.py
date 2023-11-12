@@ -10,5 +10,5 @@ class Reparation(models.Model):
      start_datetime = fields.Datetime(string='Start of reparation date/time', required=True, autodate=True)
      end_datetime = fields.Datetime(string='End of reparation date/time', required=True)
      description = fields.Text(string='Description')
-     machine = fields.Many2one('upocafe.machine', string='Machine')
-     employees = fields.Many2many('upocafe.employee', string='Employees')
+     machine_id = fields.Many2one('upocafe.machine', string='Machine')
+     employee_ids = fields.Many2many('upocafe.employee', string='Employees')
