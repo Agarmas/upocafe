@@ -16,7 +16,7 @@
     'version': '0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'product', 'mrp'],
+    'depends': ['base', 'product', 'mrp', 'hr', 'purchase'],
 
     # always loaded
     'data': [
@@ -26,11 +26,16 @@
         'views/payment_methods_views.xml',
         'views/cancelations_views.xml',
         'views/reparations_views.xml',
+        'views/machine_view.xml',
+        'views/employee_view.xml',
+        'views/status_view.xml',
     ],
+    
     # only loaded in demonstration mode
     'demo': [   
-        'data/demo_data.xml',
+        'demo/demo_data.xml',
     ],
+    
     'installable': True,
     'application': True,
 }

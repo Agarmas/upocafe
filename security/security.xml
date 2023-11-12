@@ -1,13 +1,4 @@
 <odoo>
-    <record id="product_product" model="product.product">
-        <field name="name">Variante de Producto</field>
-    </record>
-    <record id="product_template" model="product.template">
-        <field name="name">Producto</field>
-    </record>
-    <record id="mrp_bom" model="mrp.bom">
-        <field name="name">Receta</field>
-    </record>
     <record id="mrp_bom" model="mrp.bom.line">
         <field name="name">Ingrediente de Receta</field>
     </record>
@@ -21,5 +12,14 @@
         <field name="name">Reparaciones</field>
     <record id="upocafe_payment" model="upocafe.payment">
         <field name="name">Pago de un conjunto de productos</field>
+    </record>
+    <record id="upocafe_machine" model="upocafe.machine">
+        <field name="name">Maquina de cafe</field>
+    </record>
+    <record id="upocafe_status" model="upocafe.status">
+        <field name="name">Estado de una maquina</field>
+    </record>
+    <record id="hr_employee" model="hr.employees">
+        <field name="name">Empleados</field>
     </record>
 </odoo>

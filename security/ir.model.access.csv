@@ -7,3 +7,6 @@ access_upocafe_payment_method,access.upocafe.payment_method,upocafe.model_upocaf
 access_upocafe_cancelation,access.upocafe.cancelation,upocafe.model_upocafe_cancelation,base.group_user,1,1,1,1
 access_upocafe_reparation,access.upocafe.reparation,upocafe.model_upocafe_reparation,base.group_user,1,1,1,1
 access_upocafe_payment,access.upocafe.payment,upocafe.model_upocafe_payment,base.group_user,1,1,1,1
+access_upocafe_machine,access.upocafe.machine,upocafe.model_upocafe_machine,base.group_user,1,1,1,1
+access_upocafe_status,access.upocafe.status,upocafe.model_upocafe_status,base.group_user,1,1,1,1
+access_hr_employee,access.hr.employee,hr.model_hr_employee,base.group_user,1,1,1,1
