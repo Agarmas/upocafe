@@ -12,4 +12,4 @@ class Reparation(models.Model):
      repair_summary = fields.Text(string='Resumen', required=True)
      repair_description = fields.Text(string='Descripción Técnica', required=True)
      machine_id = fields.Many2one('upocafe.machine', string='Máquina')
-     employee_ids = fields.Many2many('upocafe.employee', string='Empleados')
+     employee_ids = fields.Many2many('hr.employee', string='Empleados')

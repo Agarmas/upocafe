@@ -5,7 +5,6 @@
         <field name="model">upocafe.payment</field>
         <field name="arch" type="xml">
             <tree string="Pagos de compras">
-                <field name="partner_id"/>
                 <field name="amount"/>
                 <field name="date"/>
             </tree>
@@ -19,10 +18,8 @@
             <form string="Pago de compra">
                 <sheet>
                     <group>
-                        <field name="partner_id"/>
                         <field name="amount"/>
                         <field name="date"/>
-                        <field name="product_ids"/>
                     </group>
                 </sheet>
             </form>

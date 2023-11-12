@@ -37,5 +37,5 @@
     </record>
 
 
-    <menuitem id="menu_upocafe_reparations" name="Reparaciones" parent="menu_upocafe" action="action_upocafe_reparations"/>
+    <menuitem id="menu_upocafe_reparations" name="Reparaciones" parent="menu_upocafe_machines_main" action="action_upocafe_reparations"/>
 </odoo>

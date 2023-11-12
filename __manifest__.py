@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "UPOCafe",
+    'name': "UPOcafé",
 
     'summary': """Gestion de máquinas de café""",
 
@@ -23,6 +23,7 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/products_views.xml',
+        'views/payments_views.xml',
         'views/payment_methods_views.xml',
         'views/cancelations_views.xml',
         'views/reparations_views.xml',

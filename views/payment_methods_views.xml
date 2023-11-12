@@ -31,5 +31,5 @@
     </record>
 
 
-    <menuitem id="menu_upocafe_payment_methods" name="Métodos de pago" parent="menu_upocafe" action="action_upocafe_payment_methods"/>
+    <menuitem id="menu_upocafe_payment_methods" name="Métodos de pago" parent="menu_upocafe_payments_main" action="action_upocafe_payment_methods"/>
 </odoo>

@@ -33,5 +33,5 @@
     </record>
 
 
-    <menuitem id="menu_upocafe_cancelations" name="Cancelación de pago" parent="menu_upocafe" action="action_upocafe_cancelations"/>
+    <menuitem id="menu_upocafe_cancelations" name="Cancelaciones" parent="menu_upocafe_payments_main" action="action_upocafe_cancelations"/>
 </odoo>

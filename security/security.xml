@@ -5,13 +5,22 @@
     <record id="upocafe_payment_method" model="upocafe.payment_method">
         <field name="name">Método de pago</field>
     </record>
+    <record id="upocafe_payment" model="upocafe.payment">
+        <field name="name">Pago de un conjunto de productos</field>
+    </record>
     <record id="upocafe_cancelation" model="upocafe.cancelation">
         <field name="name">Cancelación de pago</field>
     </record>
         <record id="upocafe_reparation" model="upocafe.reparation">
         <field name="name">Reparaciones</field>
-    <record id="upocafe_payment" model="upocafe.payment">
-        <field name="name">Pago de un conjunto de productos</field>
+    <record id="upocafe_machine" model="upocafe.machine">
+        <field name="name">Maquina de cafe</field>
+    </record>
+    <record id="upocafe_status" model="upocafe.status">
+        <field name="name">Estado de una maquina</field>
+    </record>
+    <record id="hr_employee" model="hr.employees">
+        <field name="name">Empleados</field>
     </record>
     <record id="upocafe_machine" model="upocafe.machine">
         <field name="name">Maquina de cafe</field>
