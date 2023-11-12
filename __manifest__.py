@@ -23,11 +23,13 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/products_views.xml',
-        'views/payments_views.xml'
+        'views/payment_methods_views.xml',
+        'views/cancelations_views.xml',
+		'views/reparations_views.xml',
     ],
     # only loaded in demonstration mode
     'demo': [   
-        'demo/demo_data.xml'
+        'data/demo_data.xml',
     ],
     'installable': True,
     'application': True,
