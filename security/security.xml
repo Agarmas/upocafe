@@ -11,13 +11,13 @@
     <record id="mrp_bom" model="mrp.bom.line">
         <field name="name">Ingrediente de Receta</field>
     </record>
-    <record id="client" model="res.partner">
+    <record id="res_partner" model="res.partner">
         <field name="name">Cliente</field>
     </record>
-    <record id="provider" model="res.partner">
+    <record id="res_company" model="res.company">
         <field name="name">Proveedor</field>
     </record>
-    <record id="reposition" model="purchase.order">
+    <record id="purchase_order" model="purchase.order">
         <field name="name">Reposición</field>
     </record>
 </odoo>
