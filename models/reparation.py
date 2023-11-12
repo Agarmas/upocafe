@@ -7,8 +7,9 @@ class Reparation(models.Model):
      _name = 'upocafe.reparation'
      _description = 'Reparation'
 
-     start_datetime = fields.Datetime(string='Start of reparation date/time', required=True, autodate=True)
-     end_datetime = fields.Datetime(string='End of reparation date/time', required=True)
-     description = fields.Text(string='Description')
-     machine_id = fields.Many2one('upocafe.machine', string='Machine')
-     employee_ids = fields.Many2many('upocafe.employee', string='Employees')
+     init_datetime = fields.Datetime(string='Comenzada', required=True, autodate=True)
+     fini_datetime = fields.Datetime(string='Finalizada', required=True)
+     repair_summary = fields.Text(string='Resumen', required=True)
+     repair_description = fields.Text(string='Descripción Técnica', required=True)
+     machine_id = fields.Many2one('upocafe.machine', string='Máquina')
+     employee_ids = fields.Many2many('upocafe.employee', string='Empleados')

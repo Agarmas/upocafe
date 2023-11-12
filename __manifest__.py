@@ -22,14 +22,20 @@
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
+        'views/products_views.xml',
+        'views/payment_methods_views.xml',
+        'views/cancelations_views.xml',
+        'views/reparations_views.xml',
         'views/machine_view.xml',
         'views/employee_view.xml',
-        'views/status_view.xml'
+        'views/status_view.xml',
     ],
+    
     # only loaded in demonstration mode
     'demo': [   
-        'demo/demo_data.xml'
+        'demo/demo_data.xml',
     ],
+    
     'installable': True,
     'application': True,
 }

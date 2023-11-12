@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_upocafe_reparations_tree" model="ir.ui.view">
+        <field name="name">upocafe.reparation.tree</field>
+        <field name="model">upocafe.reparation</field>
+        <field name="arch" type="xml">
+            <tree string="Reparación">
+                <field name="init_datetime"/>
+		    <field name="fini_datetime"/>
+                <field name="repair_summary"/>
+		    <field name="repair_description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_upocafe_reparations_form" model="ir.ui.view">
+        <field name="name">upocafe.reparation.form</field>
+        <field name="model">upocafe.reparation</field>
+        <field name="arch" type="xml">
+            <form string="Reparación">
+                <sheet>
+                    <group>
+                        <field name="init_datetime"/>
+                        <field name="fini_datetime"/>
+                        <field name="repair_summary"/>
+                        <field name="repair_description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_upocafe_reparations" model="ir.actions.act_window">
+        <field name="name">Reparaciones</field>
+        <field name="res_model">upocafe.reparation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_upocafe_reparations_tree"/>
+    </record>
+
+
+    <menuitem id="menu_upocafe_reparations" name="Reparaciones" parent="menu_upocafe" action="action_upocafe_reparations"/>
+</odoo>
