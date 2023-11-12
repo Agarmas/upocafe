@@ -1,0 +1,16 @@
+<odoo>
+    <record id="action_upocafe_provider" model="ir.actions.act_window">
+        <field name="name">Proveedor</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record id="action_upocafe_reposition" model="ir.actions.act_window">
+        <field name="name">Reposición</field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_upocafe_reposition" name="Reposición" parent="menu_upocafe" action="action_upocafe_reposition"/>
+    <menuitem id="menu_upocafe_provider" name="Proveedor" parent="menu_upocafe_reposition" action="action_upocafe_provider"/>
+</odoo>

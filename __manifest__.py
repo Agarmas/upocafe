@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "UPOCafe",
+
+    'summary': """Gestion de máquinas de café""",
+
+    'description': """Gestion de las máquinas, productos, reparaciones, proveedores...""",
+
+    'author': "TSI - UPO",
+    'website': "https://www.upo.es",
+
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
+    # for the full list
+    'category': 'Uncategorized',
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['base', 'product', 'mrp', 'purchase'],
+
+    # always loaded
+    'data': [
+        'security/ir.model.access.csv',
+        'views/menu.xml',
+        'views/client_view.xml'
+        'views/provider_view.xml'
+        'views/reposition_view.xml'
+        'views/products_views.xml',
+    ],
+    # only loaded in demonstration mode
+    'demo': [   
+        'data/demo_data.xml'
+    ],
+    'installable': True,
+    'application': True,
+}
