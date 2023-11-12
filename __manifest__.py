@@ -27,9 +27,9 @@
         'views/payment_methods_views.xml',
         'views/cancelations_views.xml',
         'views/reparations_views.xml',
-        'views/machine_view.xml',
-        'views/employee_view.xml',
-        'views/status_view.xml',
+        'views/machines_views.xml',
+        'views/employees_views.xml',
+        'views/status_views.xml',
     ],
     
     # only loaded in demonstration mode
