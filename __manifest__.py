@@ -22,9 +22,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
-        'views/client_view.xml'
-        'views/provider_view.xml'
-        'views/reposition_view.xml'
+        'views/client_view.xml',
+        'views/provider_view.xml',
+        'views/reposition_view.xml',
         'views/products_views.xml',
     ],
     # only loaded in demonstration mode
