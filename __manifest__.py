@@ -22,9 +22,9 @@
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
-        'views/status_view.xml',
+        'views/machine_view.xml',
         'views/employee_view.xml',
-        'views/machine_view.xml'
+        'views/status_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [   
