@@ -12,3 +12,4 @@ class Payment(models.Model):
     currency_id = fields.Many2one('res.currency', string='Moneda')
     cancelation_id = fields.Many2one('upocafe.cancelation', string='Cancelacion')
     product_ids = fields.Many2many('product.product', string='Productos')
+    machine_id = fields.Many2one('upocafe.machine', string='Máquinas')

@@ -9,4 +9,4 @@ class Cancelation(models.Model):
 
     name = fields.Char(string='Nombre', required=True, help='Nombre de la cancelación del pago')
     motive = fields.Text(string='Motivo', required=False, help='Motivo de la cancelación del pago')
-    payment_ids = fields.One2many('upocafe.payment', string='Pagos')
+    payment_ids = fields.One2many('upocafe.payment', 'cancelation_id', string='Pagos')
