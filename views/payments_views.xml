@@ -7,6 +7,12 @@
             <tree string="Pagos de compras">
                 <field name="amount"/>
                 <field name="date"/>
+                <field name="payment_method_id" />
+                <field name="partner_id" />
+                <field name="currency_id" />
+                <field name="cancelation_id" />
+                <field name="product_ids" />
+                <field name="machine_id" />
             </tree>
         </field>
     </record>
@@ -20,6 +26,12 @@
                     <group>
                         <field name="amount"/>
                         <field name="date"/>
+                        <field name="payment_method_id" />
+                        <field name="partner_id" />
+                        <field name="currency_id" />
+                        <field name="cancelation_id" />
+                        <field name="product_ids" />
+                        <field name="machine_id" />
                     </group>
                 </sheet>
             </form>
@@ -32,8 +44,9 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_upocafe_payment_tree"/>
     </record>
-    
+
 
     <menuitem id="menu_upocafe_payments_main" name="Pagos" parent="menu_upocafe"/>
     <menuitem id="menu_upocafe_payments" name="Pagos de compras" parent="menu_upocafe_payments_main" action="action_upocafe_payment"/>
 </odoo>
+
