@@ -1,0 +1,35 @@
+<odoo>
+
+    <record id="view_upocafe_status_tree" model="ir.ui.view">
+        <field name="name">upocafe.status.tree</field>
+        <field name="model">upocafe.status</field>
+        <field name="arch" type="xml">
+            <tree string="Estados de una maquina">
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_upocafe_status_form" model="ir.ui.view">
+        <field name="name">upocafe.status.form</field>
+        <field name="model">upocafe.status</field>
+        <field name="arch" type="xml">
+            <form string="Estados de una maquina">
+                <sheet>
+                    <group>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_upocafe_status" model="ir.actions.act_window">
+        <field name="name">Estados de una maquina</field>
+        <field name="res_model">upocafe.status</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_upocafe_status_tree"/>
+    </record>
+    
+    <menuitem id="menu_upocafe_status" name="Estados" parent="menu_upocafe_machines_main" action="action_upocafe_status"/>
+</odoo>
