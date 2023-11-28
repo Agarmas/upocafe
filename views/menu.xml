@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="menu_upocafe" name="UPOcafé" sequence="10"/>
+    <menuitem id="menu_upocafe_repositions" name="Reposicioness" parent="menu_upocafe" action="action_upocafe_repositions"/>
 </odoo>
