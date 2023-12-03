@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="menu_upocafe" name="UPOcafé" sequence="10"/>
-    <menuitem id="menu_upocafe_repositions" name="Reposicioness" parent="menu_upocafe" action="action_upocafe_repositions"/>
+    <!-- <menuitem id="menu_upocafe_repositions" name="Reposiciones" parent="menu_upocafe" action="action_upocafe_repositions"/> -->
+    <menuitem id="menu_upocafe_payment_methods" name="Métodos de pago" parent="menu_upocafe_payments_main" action="action_upocafe_payment_methods"/>
+    <menuitem id="menu_upocafe_payments_main" name="Pagos" parent="menu_upocafe"/>
+    <menuitem id="menu_upocafe_products_main" name="Productos" parent="menu_upocafe"/>
+    <menuitem id="menu_upocafe_machines_main" name="Maquinas de café" parent="menu_upocafe"/>
+    <menuitem id="menu_upocafe_employee" name="Empleados" parent="menu_upocafe" action="action_upocafe_employee"/>
 </odoo>

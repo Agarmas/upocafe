@@ -36,6 +36,5 @@
     </record>
     
 
-    <menuitem id="menu_upocafe_machines_main" name="Maquinas de café" parent="menu_upocafe"/>
     <menuitem id="menu_upocafe_machines" name="Maquinas de café" parent="menu_upocafe_machines_main" action="action_upocafe_machine"/>
 </odoo>
