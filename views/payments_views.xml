@@ -47,4 +47,3 @@
 
     <menuitem id="menu_upocafe_payments" name="Pagos de compras" parent="menu_upocafe_payments_main" action="action_upocafe_payment"/>
 </odoo>
-

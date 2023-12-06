@@ -12,9 +12,13 @@ already have an invoice created for them, so we can add this information to our 
 
 <odoo>
 
-    <record id="upocafe.product_report_inherited" model="ir.actions.report">
-        <field name="inherit_id" ref="product.product_reports.xml" />
+    <record id="report_upocafe_product_report" model="ir.actions.report">
+        <field name="name">Product report</field>
+        <field name="model">product.product</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">upocafe.upocafe_product_template</field>
+        <field name="binding_model_id" ref="model_product_product"/>
+        <field name="binding_type">report</field>
     </record>
 
 </odoo>
-    
