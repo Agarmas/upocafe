@@ -13,3 +13,8 @@ class Payment(models.Model):
     cancelation_id = fields.Many2one('upocafe.cancelation', string='Cancelacion')
     product_ids = fields.Many2many('product.product', string='Productos')
     machine_id = fields.Many2one('upocafe.machine', string='Máquina')
+
+    @api.depends('product_ids')
+    def _compute_amount(self):
+        for record in self:
+            record.amount = sum(product.price_list for product in record.product_ids)
