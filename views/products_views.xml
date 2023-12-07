@@ -3,7 +3,7 @@
     <record id="action_upocafe_products" model="ir.actions.act_window">
         <field name="name">Productos</field>
         <field name="res_model">product.product</field>
-        <field name="view_mode">kanban,tree,pivot,calendar,form</field>
+        <field name="view_mode">kanban,tree,pivot,form</field>
     </record>
 
     <record id="action_upocafe_product_recipes" model="ir.actions.act_window">
@@ -18,7 +18,4 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_upocafe_products" name="Productos e Ingredientes" parent="menu_upocafe_products_main" action="action_upocafe_products"/>
-    <menuitem id="menu_upocafe_product_recipes" name="Recetas de Productos" parent="menu_upocafe_products_main" action="action_upocafe_product_recipes"/>
-    <menuitem id="menu_upocafe_product_production" name="Producción" parent="menu_upocafe_products_main" action="action_upocafe_product_production"/>
 </odoo>
