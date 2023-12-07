@@ -11,12 +11,12 @@ information to our existing property report. For example, we know that any «Sol
 already have an invoice created for them, so we can add this information to our report  -->
 
 <odoo>
-    <record id="report_upocafe_product_report" model="ir.actions.report">
-        <field name="name">Product report</field>
-        <field name="model">product.product</field>
+    <record id="report_upocafe_payment_report" model="ir.actions.report">
+        <field name="name">Informe de los pagos</field>
+        <field name="model">upocafe.payment</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">upocafe.upocafe_products_template</field>
-        <field name="binding_model_id" ref="product.model_product_product"/>
+        <field name="report_name">upocafe.upocafe_payments_template</field>
+        <field name="binding_model_id" ref="upocafe.model_upocafe_payment"/>
         <field name="binding_type">report</field>
     </record>
 </odoo>
