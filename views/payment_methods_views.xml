@@ -29,7 +29,4 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_upocafe_payment_methods_tree"/>
     </record>
-
-        <menuitem id="menu_upocafe_payment_methods" name="Métodos de pago" parent="menu_upocafe_payments_main" action="action_upocafe_payment_methods"/>
-
 </odoo>

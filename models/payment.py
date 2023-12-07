@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import api, models, fields
 
 class Payment(models.Model):
     _name = 'upocafe.payment'
@@ -12,4 +12,9 @@ class Payment(models.Model):
     currency_id = fields.Many2one('res.currency', string='Moneda')
     cancelation_id = fields.Many2one('upocafe.cancelation', string='Cancelacion')
     product_ids = fields.Many2many('product.product', string='Productos')
-    machine_id = fields.Many2one('upocafe.machine', string='Máquinas')
+    machine_id = fields.Many2one('upocafe.machine', string='Máquina')
+
+    @api.depends('product_ids')
+    def _compute_amount(self):
+        for record in self:
+            record.amount = sum(product.price_list for product in record.product_ids)

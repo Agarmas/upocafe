@@ -22,7 +22,6 @@
     'data': [
         'security/ir.model.access.csv',
         'reports/reports.xml',
-        'views/menu.xml',
         'views/products_views.xml',
         'views/payments_views.xml',
         'views/payment_methods_views.xml',
@@ -31,7 +30,7 @@
         'views/reparations_views.xml',
         'views/employees_views.xml',
         'views/status_views.xml',
-        'demo/demo_data.xml',
+        'views/menu.xml'
     ],
     
     # only loaded in demonstration mode

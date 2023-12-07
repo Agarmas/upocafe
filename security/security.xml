@@ -11,8 +11,9 @@
     <record id="upocafe_cancelation" model="upocafe.cancelation">
         <field name="name">Cancelación de pago</field>
     </record>
-        <record id="upocafe_reparation" model="upocafe.reparation">
+    <record id="upocafe_reparation" model="upocafe.reparation">
         <field name="name">Reparaciones</field>
+    </record>
     <record id="upocafe_machine" model="upocafe.machine">
         <field name="name">Maquina de cafe</field>
     </record>
