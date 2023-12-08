@@ -5,7 +5,7 @@ class Payment(models.Model):
     _description = 'Pago de un conjunto de productos'
 
     date = fields.Date(string='Fecha')
-    amount = fields.Float(string='Precio', compute='_compute_amount')
+    amount = fields.Float(string='Precio', compute='_compute_amount', store=True)
     payment_method_id = fields.Many2one('upocafe.payment_method', string='Metodo de pago')
     partner_id = fields.Many2one('res.partner', string='Cliente')
     currency_id = fields.Many2one('res.currency', string='Moneda')

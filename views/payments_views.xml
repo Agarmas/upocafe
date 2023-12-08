@@ -38,13 +38,14 @@
         </field>
     </record>
 
-    <record id="view_upocafe_payment_graph" model="ir.ui.view">
-        <field name="name">upocafe.payment.graph</field>
+    <record id="view_upocafe_ppayment_graph" model="ir.ui.view">
+        <field name="name">payment.view.graph</field>
         <field name="model">upocafe.payment</field>
         <field name="arch" type="xml">
-            <graph string="Suma de pagos por fecha" type="bar">
+            <graph string="Analisis de pagos" type="bar">
                 <field name="date" interval="day"/>
-                <field name="amount" type="measure" operator="sum"/>
+                <field name="amount" type="measure"/>
+                <field name="payment_method_id" type="dimension"/>
             </graph>
         </field>
     </record>
