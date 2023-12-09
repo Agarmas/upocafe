@@ -16,4 +16,4 @@ class Payment(models.Model):
     @api.depends('production_ids.product_qty', 'production_ids.product_id.lst_price')
     def _compute_amount(self):
         for record in self:
-            record.amount = sum(production.product_qty * production.product_id.lst_price for production in record.production_ids)
+            record.amount = sum( (production.product_qty * production.product_id.lst_price) for production in record.production_ids)

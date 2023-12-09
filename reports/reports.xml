@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Según la documentación de odoo sobre reportes heredados
-https://www.odoo.com/documentation/17.0/es/developer/tutorials/pdf_reports.html: Inheritance in
-QWeb uses the same xpath elements as views inheritance. A QWeb template refers to its parent
-template in a different way though. It is even easier to do by just adding the inherit_id attribute
-to the template element and setting it equal to the module.parent_template_id.
-
-We didn’t add any new fields to any of the estate models in estate_account, but we can still add
-information to our existing property report. For example, we know that any «Sold» properties will
-already have an invoice created for them, so we can add this information to our report  -->
+<!-- Al usar de odoo los modelos como product.product, mrp.bom... usan los reports de esos -->
 
 <odoo>
     <record id="report_upocafe_payment_report" model="ir.actions.report">
