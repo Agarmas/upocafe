@@ -11,7 +11,7 @@
                 <field name="partner_id" />
                 <field name="currency_id" />
                 <field name="cancelation_id" />
-                <field name="product_ids" />
+                <field name="production_ids" />
                 <field name="machine_id" />
             </tree>
         </field>
@@ -29,19 +29,31 @@
                         <field name="partner_id" />
                         <field name="currency_id" />
                         <field name="cancelation_id" />
-                        <field name="product_ids" />
+                        <field name="production_ids" />
                         <field name="machine_id" />
-                        <field name="amount"/>
+                        <field name="amount" readonly="1" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <record id="view_upocafe_payment_graph" model="ir.ui.view">
+        <field name="name">payment.view.graph</field>
+        <field name="model">upocafe.payment</field>
+        <field name="arch" type="xml">
+            <graph string="Analisis de pagos" type="bar">
+                <field name="date" interval="day"/>
+                <field name="amount" type="measure"/>
+                <field name="payment_method_id" type="dimension"/>
+            </graph>
+        </field>
+    </record>
+
     <record id="action_upocafe_payment" model="ir.actions.act_window">
         <field name="name">Pagos de ventas</field>
         <field name="res_model">upocafe.payment</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,graph,form</field>
         <field name="view_id" ref="view_upocafe_payment_tree"/>
     </record>
 </odoo>
