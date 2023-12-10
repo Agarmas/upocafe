@@ -29,5 +29,4 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_upocafe_payment_methods_tree"/>
     </record>
-
 </odoo>

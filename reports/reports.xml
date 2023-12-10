@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Al usar de odoo los modelos como product.product, mrp.bom... usan los reports de esos -->
+
+<odoo>
+    <record id="report_upocafe_payment_report" model="ir.actions.report">
+        <field name="name">Informe de los pagos</field>
+        <field name="model">upocafe.payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">upocafe.upocafe_payments_template</field>
+        <field name="binding_model_id" ref="upocafe.model_upocafe_payment"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
