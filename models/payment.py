@@ -17,3 +17,5 @@ class Payment(models.Model):
     def _compute_amount(self):
         for record in self:
             record.amount = sum( (production.product_qty * production.product_id.lst_price) for production in record.production_ids)
+
+    

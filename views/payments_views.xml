@@ -32,6 +32,7 @@
                         <field name="production_ids" />
                         <field name="machine_id" />
                         <field name="amount" readonly="1" />
+                        <button name="btn-payment-submit" type="submit">Hola mundo</button>
                     </group>
                 </sheet>
             </form>
