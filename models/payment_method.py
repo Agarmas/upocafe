@@ -8,4 +8,4 @@ class PaymentMethod(models.Model):
      _description = 'Method Payment'
 
      name = fields.Char(string='Nombre', required=True, help='Nombre del método de pago')
-     payment_id = fields.One2many('upocafe.payment', string='Pagos')
+     payment_ids = fields.One2many('upocafe.payment', 'payment_method_id', string='Pagos')

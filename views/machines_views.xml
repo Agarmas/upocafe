@@ -8,7 +8,6 @@
                 <field name="model_name"/>
                 <field name="location"/>
                 <field name="create_date"/>
-                <field name="status_id"/>
             </tree>
         </field>
     </record>
@@ -23,7 +22,6 @@
                         <field name="model_name"/>
                         <field name="location"/>
                         <field name="create_date"/>
-                        <field name="status_id"/>
                     </group>
                 </sheet>
             </form>
@@ -37,7 +35,4 @@
         <field name="view_id" ref="view_upocafe_machine_tree"/>
     </record>
     
-
-    <menuitem id="menu_upocafe_machines_main" name="Maquinas de cafe" parent="menu_upocafe"/>
-    <menuitem id="menu_upocafe_machines" name="Maquinas de cafe" parent="menu_upocafe_machines_main" action="action_upocafe_machine"/>
 </odoo>

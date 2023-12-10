@@ -1,0 +1,28 @@
+<odoo>
+    <!--record id="upocafe_repositions_form_view" model="ir.ui.view">
+        <field name="name">upocafe.repositions.form</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form_view" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="machine_id" />
+            </field>
+        </field>
+    </record-->
+    <record id="purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="machine_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_upocafe_repositions" model="ir.actions.act_window">
+        <field name="name">Reposiciones</field>
+        <field name="res_model">purchase.order.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>            
+</odoo>

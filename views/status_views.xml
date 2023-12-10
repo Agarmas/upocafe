@@ -31,5 +31,4 @@
         <field name="view_id" ref="view_upocafe_status_tree"/>
     </record>
     
-    <menuitem id="menu_upocafe_status" name="Estados" parent="menu_upocafe_machines_main" action="action_upocafe_status"/>
 </odoo>

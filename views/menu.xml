@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="menu_upocafe" name="UPOcafé" sequence="10"/>
+
+    <!-- Menu general -->
+    <menuitem id="menu_upocafe" name="UPOcafé" />
+
+    <!-- Pagos -->
+    <menuitem id="menu_upocafe_payments_main" name="Pagos" parent="menu_upocafe" />
+    <menuitem id="menu_upocafe_payments" name="Pagos de ventas" parent="menu_upocafe_payments_main" action="action_upocafe_payment"/>
+    <menuitem id="menu_upocafe_payment_methods" name="Métodos de pago" parent="menu_upocafe_payments_main" action="action_upocafe_payment_methods"/>
+    <menuitem id="menu_upocafe_cancelations" name="Cancelaciones" parent="menu_upocafe_payments_main" action="action_upocafe_cancelations"/>
+
+    <!-- Productos -->
+    <menuitem id="menu_upocafe_products_main" name="Productos" parent="menu_upocafe" />
+    <menuitem id="menu_upocafe_products" name="Productos e Ingredientes" parent="menu_upocafe_products_main" action="action_upocafe_products"/>
+    <menuitem id="menu_upocafe_product_recipes" name="Recetas de Productos" parent="menu_upocafe_products_main" action="action_upocafe_product_recipes"/>
+    <menuitem id="menu_upocafe_product_production" name="Producción" parent="menu_upocafe_products_main" action="action_upocafe_product_production"/>
+
+    <!-- Máquinas -->
+    <menuitem id="menu_upocafe_machines_main" name="Maquinas de café" parent="menu_upocafe" />
+    <menuitem id="menu_upocafe_machines" name="Maquinas de café" parent="menu_upocafe_machines_main" action="action_upocafe_machine"/>
+    <menuitem id="menu_upocafe_reparations" name="Reparaciones" parent="menu_upocafe_machines_main" action="action_upocafe_reparations"/>
+    <menuitem id="menu_upocafe_status" name="Estados" parent="menu_upocafe_machines_main" action="action_upocafe_status"/>
+
+
+    <!-- Empleados -->
+    <menuitem id="menu_upocafe_employee" name="Empleados" parent="menu_upocafe" action="action_upocafe_employee" />
+
+    <!-- Reposiciones -->
+    <!-- <menuitem id="menu_upocafe_repositions" name="Reposiciones" parent="menu_upocafe" action="action_upocafe_repositions" /> -->
+
 </odoo>

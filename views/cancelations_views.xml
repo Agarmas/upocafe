@@ -5,7 +5,7 @@
         <field name="arch" type="xml">
             <tree string="Cancelación de pago">
                 <field name="name"/>
-		    <field name="motive"/>
+		<field name="motive"/>
             </tree>
         </field>
     </record>
@@ -18,7 +18,7 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-				<field name="motive"/>
+                        <field name="motive"/>
                     </group>
                 </sheet>
             </form>
@@ -32,6 +32,4 @@
         <field name="view_id" ref="view_upocafe_cancelations_tree"/>
     </record>
 
-
-    <menuitem id="menu_upocafe_cancelations" name="Cancelación de pago" parent="menu_upocafe" action="action_upocafe_cancelations"/>
 </odoo>

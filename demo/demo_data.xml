@@ -32,5 +32,46 @@
             <field name="purchase_ok">False</field>
             <field name="sale_ok">True</field>
         </record>
+
+        <!-- Recipe: Cafe con Leche -->
+        <record id="bom_cafe_con_leche" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_cafe_con_leche"/>
+            <field name="product_qty">1</field>
+        </record>
+
+        <!-- Recipe Line: Cafe para Cafe con Leche -->
+        <record id="bom_line_cafe_con_leche_cafe" model="mrp.bom.line">
+            <field name="bom_id" ref="bom_cafe_con_leche"/>
+            <field name="product_id" ref="product_cafe"/>
+            <field name="product_qty">0.5</field>
+        </record>
+
+        <!-- Recipe Line: Leche para Cafe con Leche -->
+        <record id="bom_line_cafe_con_leche_leche" model="mrp.bom.line">
+            <field name="bom_id" ref="bom_cafe_con_leche"/>
+            <field name="product_id" ref="product_leche"/>
+            <field name="product_qty">0.5</field>
+        </record>
+
+        <!-- Recipe: Cafe Cortado -->
+        <record id="bom_cafe_cortado" model="mrp.bom">
+            <field name="product_tmpl_id" ref="product_cafe_cortado"/>
+            <field name="product_qty">1</field>
+        </record>
+
+        <!-- Recipe Line: Cafe para Cafe Cortado -->
+        <record id="bom_line_cafe_cortado_cafe" model="mrp.bom.line">
+            <field name="bom_id" ref="bom_cafe_cortado"/>
+            <field name="product_id" ref="product_cafe"/>
+            <field name="product_qty">0.7</field>
+        </record>
+
+        <!-- Recipe Line: Leche para Cafe Cortado -->
+        <record id="bom_line_cafe_con_leche_leche" model="mrp.bom.line">
+            <field name="bom_id" ref="bom_cafe_cortado"/>
+            <field name="product_id" ref="product_leche"/>
+            <field name="product_qty">0.3</field>
+        </record>
     </data>
 </odoo>
+

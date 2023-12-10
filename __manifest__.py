@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "UPOCafe",
+    'name': "UPOcafé",
 
     'summary': """Gestion de máquinas de café""",
 
@@ -20,15 +20,19 @@
 
     # always loaded
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
-        'views/menu.xml',
+        'reports/payments_report.xml',
+        'reports/reports.xml',
         'views/products_views.xml',
+        'views/payments_views.xml',
         'views/payment_methods_views.xml',
         'views/cancelations_views.xml',
+        'views/machines_views.xml',
         'views/reparations_views.xml',
-        'views/machine_view.xml',
-        'views/employee_view.xml',
-        'views/status_view.xml',
+        'views/employees_views.xml',
+        'views/status_views.xml',
+        'views/menu.xml'
     ],
     
     # only loaded in demonstration mode

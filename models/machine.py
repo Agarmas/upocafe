@@ -8,7 +8,7 @@ class Machine(models.Model):
      name = fields.Char(string="Nombre del modelo", size=255 ,required=True, help="name of the model")
      location = fields.Char('Localizacion', size=255, required=True, help="machines location")
      create_date = fields.Datetime('Fecha del alta',required=True, autodate = True)
-     
+    
      status_id = fields.Many2one("upocafe.status",string="Estado actual")
      #order_ids = fields.One2many("purchase.order",string="Machines repostions")
      reparations_ids = fields.One2many("upocafe.reparation", 'machine_id', string="Machines reparations")

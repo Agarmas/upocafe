@@ -35,7 +35,4 @@
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="view_upocafe_reparations_tree"/>
     </record>
-
-
-    <menuitem id="menu_upocafe_reparations" name="Reparaciones" parent="menu_upocafe" action="action_upocafe_reparations"/>
 </odoo>
