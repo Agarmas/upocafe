@@ -24,8 +24,10 @@
             <form string="Pago de venta">
                 <sheet layout="auto">
                     <group>
-                        <field name="date" />
-                        <field name="machine_id" />
+                        <field name="date" col="4"/>
+                        <field name="machine_id" col="4"/>
+                        <button name="btn_setDate" string="Fijar fecha a hoy" type="object"
+                        class="oe_highlight" col="4"/>
                     </group>
                     <notebook>
                         <page name="payment_data" string="Datos del pago">
@@ -45,10 +47,8 @@
                     <newline></newline>
                     <group>
                         <field name="amount" readonly="1" />
-                        <button name="btn_setDate" string="Fijar fecha a hoy" type="object"
-                            class="oe_highlight" />
                         <button name="btn_removeProductions" string="Vaciar cesta" type="object"
-                            class="oe_highlight" />
+                        class="oe_highlight" />
                     </group>
                 </sheet>
             </form>
