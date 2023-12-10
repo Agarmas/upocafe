@@ -1,0 +1,35 @@
+<odoo>
+    <template id="report_repositions_inherit" inherit_id="purchase.report_purchaseorder_document">
+        <xpath expr="//div[@id='informations']" position="after">
+            <div t-if="o.machine_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Materiales reservados de <span t-field="o.name" />
+            </div>
+            <div t-if="o.machine_id" id="machine" class="row" style="margin-top: 10px;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Modelo</th>
+                            <th>Ubicación (Coordenadas)</th>
+                            <th>Fecha de instalación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="o.machine_id" t-as="machine">
+                            <tr>
+                                <td>
+                                    <p t-field="machine.name" />
+                                </td>
+                                <td>
+                                    <p t-field="machine.location" />
+                                </td>
+                                <td>
+                                    <p t-field="machine.create_date" />
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </xpath>
+    </template>
+</odoo>
