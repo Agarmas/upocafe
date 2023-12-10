@@ -17,3 +17,28 @@ class Payment(models.Model):
     def _compute_amount(self):
         for record in self:
             record.amount = sum( (production.product_qty * production.product_id.lst_price) for production in record.production_ids)
+
+    def btn_removeProductions(self):
+        # Borramos los productos de este pago
+        self.write({'production_ids':[(5,)]})
+
+
+        # Borramos las ordenes de producción para no tener ordenes de producción invalidas
+        production_orders = self.env['mrp.production'].search([('id', 'in', self.production_ids.ids)])
+        production_orders.unlink()
+
+        # Recargo la vista para que se vea reflejado
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'reload',
+        }
+    
+    def btn_setDate(self):
+        # Fijar el campo date a la fecha de hoy
+        today_date = fields.Date.today()
+        self.write({'date': today_date})
+        
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'reload', 
+        }
