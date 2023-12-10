@@ -5,8 +5,8 @@
         <field name="model">upocafe.payment</field>
         <field name="arch" type="xml">
             <tree string="Pagos de ventas">
-                <field name="amount"/>
-                <field name="date"/>
+                <field name="amount" />
+                <field name="date" />
                 <field name="payment_method_id" />
                 <field name="partner_id" />
                 <field name="currency_id" />
@@ -22,17 +22,33 @@
         <field name="model">upocafe.payment</field>
         <field name="arch" type="xml">
             <form string="Pago de venta">
-                <sheet>
+                <sheet layout="auto">
                     <group>
-                        <field name="date"/>
-                        <field name="payment_method_id" />
-                        <field name="partner_id" />
-                        <field name="currency_id" />
-                        <field name="cancelation_id" />
-                        <field name="production_ids" />
+                        <field name="date" />
                         <field name="machine_id" />
+                    </group>
+                    <notebook>
+                        <page name="payment_data" string="Datos del pago">
+                            <group>
+                                <field name="payment_method_id" />
+                                <field name="partner_id" />
+                                <field name="currency_id" />
+                                <field name="cancelation_id" />
+                            </group>
+                        </page>
+                        <page name="production_selection" string="Productos seleccionados">
+                            <group>
+                                <field name="production_ids" />
+                            </group>
+                        </page>
+                    </notebook>
+                    <newline></newline>
+                    <group>
                         <field name="amount" readonly="1" />
-                        <button name="btn-payment-submit" type="submit">Hola mundo</button>
+                        <button name="btn_setDate" string="Fijar fecha a hoy" type="object"
+                            class="oe_highlight" />
+                        <button name="btn_removeProductions" string="Vaciar cesta" type="object"
+                            class="oe_highlight" />
                     </group>
                 </sheet>
             </form>
@@ -44,9 +60,9 @@
         <field name="model">upocafe.payment</field>
         <field name="arch" type="xml">
             <graph string="Analisis de pagos" type="bar">
-                <field name="date" interval="day"/>
-                <field name="amount" type="measure"/>
-                <field name="payment_method_id" type="dimension"/>
+                <field name="date" interval="day" />
+                <field name="amount" type="measure" />
+                <field name="payment_method_id" type="dimension" />
             </graph>
         </field>
     </record>
@@ -55,6 +71,6 @@
         <field name="name">Pagos de ventas</field>
         <field name="res_model">upocafe.payment</field>
         <field name="view_mode">tree,graph,form</field>
-        <field name="view_id" ref="view_upocafe_payment_tree"/>
+        <field name="view_id" ref="view_upocafe_payment_tree" />
     </record>
 </odoo>
