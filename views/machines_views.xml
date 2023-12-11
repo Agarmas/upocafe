@@ -5,7 +5,7 @@
         <field name="model">upocafe.machine</field>
         <field name="arch" type="xml">
             <tree string="Maquinas de cafe">
-                <field name="model_name"/>
+                <field name="name"/>
                 <field name="location"/>
                 <field name="create_date"/>
             </tree>
@@ -19,7 +19,7 @@
             <form string="Maquina de cafe">
                 <sheet>
                     <group>
-                        <field name="model_name"/>
+                        <field name="name"/>
                         <field name="location"/>
                         <field name="create_date"/>
                     </group>
