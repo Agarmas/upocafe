@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="upocafe_providers_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div t-if="doc.repositions_ids" class="page">
+                    <h2>Historial de reposiciones</h2>
+                    <table style="width:100%; border-collapse: collapse; border: 1px solid #ddd;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;"></th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Producto</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Importe total</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Moneda</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Fecha de reposición</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Modelo de la maquina</th>
+                            </tr>
+                        </thead>
+                        <t t-foreach="doc.repositions_ids" t-as="rep">
+                            <tbody>
+                                <tr>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="rep.name" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="rep.product_id" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="rep.price_total" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="rep.currency_id.name" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="rep.date_approve" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="rep.machine_id.name" /></td>
+                                </tr>
+                            </tbody>
+                        </t>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

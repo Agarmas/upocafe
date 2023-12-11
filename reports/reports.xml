@@ -9,4 +9,12 @@
         <field name="binding_model_id" ref="upocafe.model_upocafe_reposition"/>
         <field name="binding_type">report</field>
     </record-->
+    <record id="report_upocafe_providers_report" model="ir.actions.report">
+        <field name="name">Registro de reposiciones</field>
+        <field name="model">res.company</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">upocafe.upocafe_providers_template</field>
+        <field name="binding_model_id" ref="base.model_res_company"/>
+        <field name="binding_type">report</field>
+    </record>
 </odoo>
