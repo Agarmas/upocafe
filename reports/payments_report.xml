@@ -19,13 +19,13 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.date" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.payment_method_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.partner_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.currency_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.cancelation_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.machine_id.model_name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.amount" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.date" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.payment_method_id.name" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.partner_id.name" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.currency_id.name" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.cancelation_id.name" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.machine_id.model_name" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.amount" /></td>
                             </tr>
                         </tbody>
                     </table>
@@ -43,9 +43,9 @@
                         <tbody>
                             <t t-foreach="doc.production_ids" t-as="production">
                                 <tr>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_id.name" /></td>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_qty" /></td>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_id.lst_price" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="production.product_id.name" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="production.product_qty" /></td>
+                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="production.product_id.lst_price" /></td>
                                     <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_qty * production.product_id.lst_price" /></td>
                                 </tr>
                             </t>
