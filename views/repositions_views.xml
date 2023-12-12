@@ -1,24 +1,63 @@
 <odoo>
-    <record id="upocafe_repositions_form_view" model="ir.ui.view">
-        <field name="name">upocafe.repositions.form</field>
+
+    <!--record id="view_upocafe_repositions_tree" model="ir.ui.view">
+        <field name="name">purchase.order.tree</field>
         <field name="model">purchase.order</field>
-        <field name="inherit_id" ref="purchase.purchase_order_form_view" />
-        <!--field name="arch" type="xml">
-            <field name="product_id" position="after">
-                <field name="machine_id" />
-            </field>
-            <!xpath expr="//form/sheet/notebook/page/field/tree/field[@name='product_id']" position="before">
-                <field name="new_field"/>
-            </xpath->
-        </field-->
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <tree string="Purchase Order"
+                    decoration-muted="state=='cancel'" sample="1">
+                <field name="priority" optional="show" widget="priority" nolabel="1"/>
+                <field name="partner_ref" optional="hide"/>
+                <field name="name" string="Reference" readonly="1" decoration-info="state in ('draft','sent')"/>
+                <field name="date_order" column_invisible="not context.get('quotation_only', False)" readonly="state in ['cancel', 'done', 'purchase']" optional="show"/>
+                <field name="date_approve" column_invisible="context.get('quotation_only', False)" optional="show"/>
+                <field name="partner_id" readonly="1"/>
+                <field name="company_id" readonly="1" options="{'no_create': True}"
+                    groups="base.group_multi_company" optional="show"/>
+                <field name="user_id" optional="show"/>
+                <field name="origin" optional="show"/>
+                <field name="amount_untaxed" sum="Total Untaxed amount" string="Untaxed" widget="monetary" optional="hide"/>
+                <field name="amount_total" sum="Total amount" widget="monetary" optional="show"/>
+                <field name="currency_id" column_invisible="True" readonly="state in ['cancel', 'done', 'purchase']"/>
+                <field name="state" optional="show"/>
+                <field name="date_planned" column_invisible="context.get('quotation_only', False)" optional="show"/>
+                <field name="invoice_status" column_invisible="context.get('quotation_only', False)" optional="hide"/>
+                <field name="activity_exception_decoration" widget="activity_exception"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_upocafe_reposition_tree" model="ir.ui.view">
+        <field name="name">upocafe.reposition.tree</field>
+        <field name="model">upocafe.reposition</field>
+        <field name="arch" type="xml">
+            <tree string="Reposición">
+                <field name="name"/>
+                <field name="date_order"/>
+                <field name="date_approve"/>
+                <field name="company_id"/>
+                <field name="amount_total"/>
+                <field name="machine_id"/>
+            </tree>
+        </field>
+    </record-->
+
+    <record id="purchase_order_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="after">
+                <field name="machine_id"/>
+            </xpath>
+        </field>
     </record>
 
-    <!--record id="action_upocafe_repositions" model="ir.actions.act_window">
+    <record id="action_upocafe_repositions" model="ir.actions.act_window">
         <field name="name">Reposiciones</field>
-        <field name="res_model">purchase.order</field>
+        <field name="res_model">purchase.order.line</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="upocafe_repositions_form_view"/>
-    </record>        
+    </record>            
     
-    <menuitem id="menu_upocafe_repositions" name="Reposicioness" parent="menu_upocafe" action="action_upocafe_repositions"/-->
+    <menuitem id="menu_upocafe_repositions" name="Reposiciones" parent="menu_upocafe_machines_main" action="action_upocafe_repositions"/>
 </odoo>
