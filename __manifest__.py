@@ -32,6 +32,9 @@
         'views/reparations_views.xml',
         'views/employees_views.xml',
         'views/status_views.xml',
+        'views/repositions_views.xml',
+        'views/providers_views.xml',
+        'views/clients_views.xml',
         'views/menu.xml'
     ],
     

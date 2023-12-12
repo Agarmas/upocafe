@@ -24,7 +24,7 @@
                                 <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.partner_id.name" /></td>
                                 <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.currency_id.name" /></td>
                                 <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.cancelation_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.machine_id.model_name" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.machine_id.name" /></td>
                                 <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><p t-field="doc.amount" /></td>
                             </tr>
                         </tbody>

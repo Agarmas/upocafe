@@ -6,3 +6,4 @@ from . import payment
 from . import payment_method 
 from . import reparation
 from . import status
+from . import reposition

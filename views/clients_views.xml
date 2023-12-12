@@ -1,0 +1,9 @@
+<odoo>
+    <record id="action_upocafe_partner" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_upocafe_partner" name="Clientes" parent="menu_upocafe" action="action_upocafe_partner"/>
+</odoo>
