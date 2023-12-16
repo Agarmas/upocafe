@@ -27,6 +27,8 @@
     <menuitem id="menu_upocafe_employee" name="Empleados" parent="menu_upocafe" action="action_upocafe_employee" />
 
     <!-- Reposiciones -->
-    <!-- <menuitem id="menu_upocafe_repositions" name="Reposiciones" parent="menu_upocafe" action="action_upocafe_repositions" /> -->
+    <menuitem id="menu_upocafe_repositions" name="Reposiciones" parent="menu_upocafe_machines_main" action="action_upocafe_repositions"/>
+    <menuitem id="menu_upocafe_company" name="Proveedores" parent="menu_upocafe" action="action_upocafe_company"/>
+    <menuitem id="menu_upocafe_partner" name="Clientes" parent="menu_upocafe" action="action_upocafe_partner"/>
 
 </odoo>

@@ -5,5 +5,4 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_upocafe_partner" name="Clientes" parent="menu_upocafe" action="action_upocafe_partner"/>
 </odoo>
