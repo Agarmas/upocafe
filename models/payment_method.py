@@ -9,11 +9,13 @@ class PaymentMethod(models.Model):
                         help='Nombre del método de pago')
      payment_ids = fields.One2many('upocafe.payment', 'payment_method_id',
                                    string='Pagos',
-                                   help='Pagos realizados con este método de pago')
-     transactions = fields.Integer(compute='_totalTransactions',
+                                   help='Pagos realizados con \
+                                        este método de pago')
+     ntransactions = fields.Integer(compute='_totalTransactions',
                                    string='Pagos totales', store=True,
-                                   help='Total de pagos realizafos con este método de pago')
+                                   help='Total de pagos realizados con \
+                                        este método de pago')
 
      def _totalTransactions(self):
           for record in self:
-               record.transactions = len(record.payment_ids)
+               record.ntransactions = len(record.payment_ids)
