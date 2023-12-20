@@ -1,4 +1,5 @@
 <odoo>
+
     <record id="action_upocafe_partner" model="ir.actions.act_window">
         <field name="name">Clientes</field>
         <field name="res_model">res.partner</field>

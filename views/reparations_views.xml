@@ -1,13 +1,16 @@
 <odoo>
+
     <record id="view_upocafe_reparations_tree" model="ir.ui.view">
         <field name="name">upocafe.reparation.tree</field>
         <field name="model">upocafe.reparation</field>
         <field name="arch" type="xml">
             <tree string="Reparación">
-                <field name="init_datetime"/>
-		    <field name="fini_datetime"/>
-                <field name="repair_summary"/>
-		    <field name="repair_description"/>
+                <field name="machine_id" widget="many2one" />
+                <field name="name" />
+                <field name="description" />
+                <field name="started" />
+                <field name="ended" />
+                <field name="employee_ids" />
             </tree>
         </field>
     </record>
@@ -19,20 +22,36 @@
             <form string="Reparación">
                 <sheet>
                     <group>
-                        <field name="init_datetime"/>
-                        <field name="fini_datetime"/>
-                        <field name="repair_summary"/>
-                        <field name="repair_description"/>
+                        <field name="machine_id" widget="many2one" />
+                        <field name="name" />
+                        <field name="description" />
+                        <field name="started" />
+                        <field name="ended" />
+                        <field name="employee_ids" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <record id="gym_classes_calendar_view" model="ir.ui.view">
+        <field name="name">upocafe.reparation.calendar</field>
+        <field name="model">upocafe.reparation</field>
+        <field name="arch" type="xml">
+            <calendar string="Reparaciones" color="machine_id"
+                date_start="started" date_stop="ended" mode="month">
+                <field name="machine_id" widget="many2one" />
+                <field name="name" />
+                <field name="employee_ids" />
+            </calendar>
+        </field>
+    </record>
+
     <record id="action_upocafe_reparations" model="ir.actions.act_window">
         <field name="name">Reparaciones</field>
         <field name="res_model">upocafe.reparation</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_upocafe_reparations_tree"/>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_id" ref="view_upocafe_reparations_tree" />
     </record>
+
 </odoo>

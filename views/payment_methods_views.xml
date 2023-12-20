@@ -1,10 +1,12 @@
 <odoo>
+
     <record id="view_upocafe_payment_methods_tree" model="ir.ui.view">
         <field name="name">upocafe.payment_method.tree</field>
         <field name="model">upocafe.payment_method</field>
         <field name="arch" type="xml">
             <tree string="Métodos de pago">
-                <field name="name"/>
+                <field name="name" />
+                <field name="payment_ids" />
             </tree>
         </field>
     </record>
@@ -16,7 +18,8 @@
             <form string="Método de pago">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="name" />
+                        <field name="payment_ids" readonly="1" />
                     </group>
                 </sheet>
             </form>
@@ -27,6 +30,7 @@
         <field name="name">Métodos de pago</field>
         <field name="res_model">upocafe.payment_method</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_upocafe_payment_methods_tree"/>
+        <field name="view_id" ref="view_upocafe_payment_methods_tree" />
     </record>
+
 </odoo>

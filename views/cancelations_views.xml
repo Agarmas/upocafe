@@ -1,11 +1,12 @@
 <odoo>
+
     <record id="view_upocafe_cancelations_tree" model="ir.ui.view">
         <field name="name">upocafe.cancelation.tree</field>
         <field name="model">upocafe.cancelation</field>
         <field name="arch" type="xml">
             <tree string="Cancelación de pago">
-                <field name="name"/>
-		<field name="motive"/>
+                <field name="name" />
+                <field name="motive" />
             </tree>
         </field>
     </record>
@@ -17,8 +18,8 @@
             <form string="Cancelación de pago">
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="motive"/>
+                        <field name="name" />
+                        <field name="motive" />
                     </group>
                 </sheet>
             </form>
@@ -29,7 +30,7 @@
         <field name="name">Cancelación de pago</field>
         <field name="res_model">upocafe.cancelation</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_upocafe_cancelations_tree"/>
+        <field name="view_id" ref="view_upocafe_cancelations_tree" />
     </record>
 
 </odoo>
