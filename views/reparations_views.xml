@@ -21,14 +21,27 @@
         <field name="arch" type="xml">
             <form string="Reparación">
                 <sheet>
-                    <group>
-                        <field name="machine_id" widget="many2one" />
+                    <group name="name" string="Resumen">
+                        <field name="machine_id" widget="many2one"
+                            string="Máquina afectada" />
                         <field name="name" />
-                        <field name="description" />
+                    </group>
+                    <group name="details" string="Detalles">
                         <field name="started" />
                         <field name="ended" />
-                        <field name="employee_ids" />
                     </group>
+                    <notebook>
+                        <page name="personel" string="Personal involucrado">
+                            <group>
+                                <field name="employee_ids" />
+                            </group>
+                        </page>
+                        <page name="tecnical" string="Descripción técnica">
+                            <group>
+                                <field name="description" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

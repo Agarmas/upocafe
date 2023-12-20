@@ -21,9 +21,20 @@
                     <group>
                         <field name="name" />
                         <field name="ncancelations" readonly="1" />
-                        <field name="motive" />
-                        <field name="payment_ids" readonly="1" />
                     </group>
+                    <notebook>
+                        <page name="motive_page" string="Motivo">
+                            <group>
+                                <field name="motive" />
+                            </group>
+                        </page>
+                        <page name="transacitons_page"
+                            string="Transacciones afectadas">
+                            <group>
+                                <field name="payment_ids" readonly="1" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
