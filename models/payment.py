@@ -51,12 +51,6 @@ class Payment(models.Model):
         # Borramos las ordenes de producción para no tener ordenes de producción invalidas
         production_orders = self.env['mrp.production'].search([('id', 'in', self.production_ids.ids)])
         production_orders.unlink()
-
-        # Recargo la vista para que se vea reflejado
-        return {
-            'type': 'ir.actions.client',
-            'tag': 'reload',
-        }
     
 
     # Método para poner la fecha del pago a hoy
@@ -64,8 +58,3 @@ class Payment(models.Model):
         # Fijar el campo date a la fecha de hoy
         today_date = fields.Date.today()
         self.write({'date': today_date})
-        
-        return {
-            'type': 'ir.actions.client',
-            'tag': 'reload', 
-        }
