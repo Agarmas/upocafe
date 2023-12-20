@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <tree string="Cancelación de pago">
                 <field name="name" />
+                <field name="ncancelations" />
                 <field name="motive" />
             </tree>
         </field>
@@ -19,7 +20,9 @@
                 <sheet>
                     <group>
                         <field name="name" />
+                        <field name="ncancelations" readonly="1" />
                         <field name="motive" />
+                        <field name="payment_ids" readonly="1" />
                     </group>
                 </sheet>
             </form>

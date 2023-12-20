@@ -12,7 +12,7 @@ class PaymentMethod(models.Model):
                                    help='Pagos realizados con \
                                         este método de pago')
      ntransactions = fields.Integer(compute='_totalTransactions',
-                                   string='Pagos totales', store=True,
+                                   string='Total', store=True,
                                    help='Total de pagos realizados con \
                                         este método de pago')
 
