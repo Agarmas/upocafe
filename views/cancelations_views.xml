@@ -40,10 +40,21 @@
         </field>
     </record>
 
+    <record id="view_upocafe_cancelation_graph" model="ir.ui.view">
+        <field name="name">cancelation.view.graph</field>
+        <field name="model">upocafe.cancelation</field>
+        <field name="arch" type="xml">
+            <graph string="Cancelaciones por pago" type="bar">
+                <field name="payment_ids" type="dimension" />
+                <field name="ncancelations" type="measure" />
+            </graph>
+        </field>
+    </record>
+
     <record id="action_upocafe_cancelations" model="ir.actions.act_window">
         <field name="name">Cancelación de pago</field>
         <field name="res_model">upocafe.cancelation</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field>
         <field name="view_id" ref="view_upocafe_cancelations_tree" />
     </record>
 
