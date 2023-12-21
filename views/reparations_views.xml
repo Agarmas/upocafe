@@ -47,7 +47,7 @@
         </field>
     </record>
 
-    <record id="gym_classes_calendar_view" model="ir.ui.view">
+    <record id="view_upocafe_reparations_calendar" model="ir.ui.view">
         <field name="name">upocafe.reparation.calendar</field>
         <field name="model">upocafe.reparation</field>
         <field name="arch" type="xml">
