@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="upocafe_reparations_template">
+        <t t-call="web.html_container">
+            <h1>Reporte de reparacion</h1>
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h2 t-field="doc.machine_id" />
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="3">
+                                    <h3>Detalles</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Resumen
+                                </td>
+                                <td colspan="2">
+                                    <p t-field="doc.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Desde-hasta</td>
+                                <td>
+                                    <p t-field="doc.started" />
+                                </td>
+                                <td>
+                                    <p t-field="doc.ended" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Descripcion</td>
+                                <td colspan="2">
+                                    <p t-field="doc.description" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

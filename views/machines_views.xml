@@ -34,7 +34,6 @@
                         <field name="products_ids"/>
                         <newline></newline>
                         <button name="btn_setDate" string="Establecer fecha" type="object" class="oe_highlight" />
-                        <button name="btn_generate_report" string="Generar reporte" type="object" class="oe_highlight" />
                     </group>
                 </sheet>
             </form>

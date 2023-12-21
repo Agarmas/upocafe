@@ -33,7 +33,7 @@
         <field name="name">Estados de una maquina</field>
         <field name="res_model">upocafe.status</field>
         <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_upocafe_status_tree"/>
+        <field name="view_id" ref="view_upocafe_status_tree" />
     </record>
-    
+
 </odoo>

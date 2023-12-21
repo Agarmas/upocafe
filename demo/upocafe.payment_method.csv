@@ -1,0 +1,4 @@
+id,name,payments_ids/id,ntransactions
+credit,Tarjeta de credito,,
+debit,Tarjeta de debito,,
+cash,Efectivo,,

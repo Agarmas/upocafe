@@ -22,7 +22,7 @@
             <form string="Reparación">
                 <sheet>
                     <group name="name" string="Resumen">
-                        <field name="machine_id" widget="many2one"
+                        <field name="machine_id" widget="many2one" required="1"
                             string="Máquina afectada" />
                         <field name="name" />
                     </group>

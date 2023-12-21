@@ -46,8 +46,7 @@ class Payment(models.Model):
     def btn_removeProductions(self):
         # Borramos los productos de este pago
         self.write({'production_ids':[(5,)]})
-
-
+        
         # Borramos las ordenes de producción para no tener ordenes de producción invalidas
         production_orders = self.env['mrp.production'].search([('id', 'in', self.production_ids.ids)])
         production_orders.unlink()
