@@ -27,8 +27,8 @@
                         <field name="name" />
                     </group>
                     <group name="details" string="Detalles">
-                        <field name="started" />
-                        <field name="ended" />
+                        <field name="started" readonly="1" />
+                        <field name="ended" readonly="1" />
                     </group>
                     <notebook>
                         <page name="personel" string="Personal involucrado">
@@ -42,6 +42,10 @@
                             </group>
                         </page>
                     </notebook>
+                    <newline></newline>
+                    <button name="btn_end_reparation"
+                        string="Finaliza reparación"
+                        type="object" class="oe_highlight" />
                 </sheet>
             </form>
         </field>

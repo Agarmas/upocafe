@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <template id="report_repositions_inherit" inherit_id="purchase.report_purchaseorder_document">
         <xpath expr="//div[@id='informations']" position="after">
-            <div t-if="o.order_line.machine_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 17px;">
+            <div t-if="o.order_line.machine_id" class="row"
+                style="margin-top: 40px; font-weight: bold; font-size: 17px;">
                 Informacion de la máquina:
             </div>
             <div t-if="o.order_line.machine_id" id="machine" class="row" style="margin-top: 16px;">
@@ -10,10 +13,10 @@
                         <tr>
                             <td>
                                 <p>
-                                    <strong>Modelo: </strong>
+                                    <strong>Identificador: </strong>
                                 </p>
                                 <p>
-                                    <strong>Coordenadas: </strong>
+                                    <strong>Localización: </strong>
                                 </p>
                                 <p>
                                     <strong>Fecha de instalación: </strong>
@@ -30,4 +33,5 @@
             </div>
         </xpath>
     </template>
+
 </odoo>
