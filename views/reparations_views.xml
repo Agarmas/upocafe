@@ -22,7 +22,7 @@
             <form string="Reparación">
                 <sheet>
                     <group name="name" string="Resumen">
-                        <field name="machine_id" widget="many2one"
+                        <field name="machine_id" widget="many2one" required="1"
                             string="Máquina afectada" />
                         <field name="name" />
                     </group>
@@ -31,21 +31,22 @@
                         <field name="ended" readonly="1" />
                     </group>
                     <notebook>
-                        <page name="personel" string="Personal involucrado">
-                            <group>
-                                <field name="employee_ids" />
-                            </group>
-                        </page>
-                        <page name="tecnical" string="Descripción técnica">
+                        <page name="technical" string="Descripción técnica">
                             <group>
                                 <field name="description" />
                             </group>
                         </page>
+                        <page name="personel" string="Personal involucrado">
+                            <group>
+                                <field name="employee_ids" required="1" />
+                            </group>
+                        </page>
                     </notebook>
-                    <newline></newline>
-                    <button name="btn_end_reparation"
-                        string="Finaliza reparación"
-                        type="object" class="oe_highlight" />
+                    <group>
+                        <button name="btn_end_reparation"
+                            string="Finalizar reparación"
+                            type="object" class="oe_highlight" />
+                    </group>
                 </sheet>
             </form>
         </field>

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "UPOcafé",
 
@@ -23,6 +22,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'reports/payments_report.xml',
+        'reports/reparations_report.xml',
         'reports/repositions_report.xml',
         'reports/reports.xml',
         'views/products_views.xml',
@@ -36,7 +36,7 @@
         'views/repositions_views.xml',
         'views/providers_views.xml',
         'views/clients_views.xml',
-        'views/menu.xml'
+        'views/menu.xml',
     ],
     
     # only loaded in demonstration mode
