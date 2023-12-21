@@ -7,7 +7,11 @@
             <tree string="Maquinas de cafe">
                 <field name="name"/>
                 <field name="location"/>
-                <field name="create_date"/>
+                <field name="create_date" />
+                <field name="status_id" />
+                <field name="reparations_ids" />
+                <field name="payments_ids" />
+                <field name="products_ids" />
             </tree>
         </field>
     </record>
@@ -19,9 +23,13 @@
             <form string="Maquina de cafe">
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="location"/>
-                        <field name="create_date"/>
+                        <field name="name" />
+                        <field name="location" />
+                        <field name="create_date" />
+                        <field name="status_id" readonly="1" />
+                        <field name="reparations_ids" readonly="1" />
+                        <field name="payments_ids" readonly="1" />
+                        <field name="products_ids" readonly="1" />
                     </group>
                 </sheet>
             </form>
@@ -35,7 +43,4 @@
         <field name="view_id" ref="view_upocafe_machine_tree"/>
     </record>
     
-
-    <menuitem id="menu_upocafe_machines_main" name="Maquinas de café" parent="menu_upocafe"/>
-    <menuitem id="menu_upocafe_machines" name="Maquinas de café" parent="menu_upocafe_machines_main" action="action_upocafe_machine"/>
 </odoo>

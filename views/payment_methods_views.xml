@@ -1,10 +1,12 @@
 <odoo>
+
     <record id="view_upocafe_payment_methods_tree" model="ir.ui.view">
         <field name="name">upocafe.payment_method.tree</field>
         <field name="model">upocafe.payment_method</field>
         <field name="arch" type="xml">
             <tree string="Métodos de pago">
-                <field name="name"/>
+                <field name="name" />
+                <field name="ntransactions" />
             </tree>
         </field>
     </record>
@@ -16,20 +18,31 @@
             <form string="Método de pago">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="name" />
+                        <field name="ntransactions" readonly="1" />
+                        <field name="payment_ids" readonly="1" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <record id="view_upocafe_payment_method_graph" model="ir.ui.view">
+        <field name="name">payment_method.view.graph</field>
+        <field name="model">upocafe.payment_method</field>
+        <field name="arch" type="xml">
+            <graph string="Método de pago por pago" type="bar">
+                <field name="payment_ids" type="dimension" />
+                <field name="ntransactions" type="measure" />
+            </graph>
+        </field>
+    </record>
+
     <record id="action_upocafe_payment_methods" model="ir.actions.act_window">
         <field name="name">Métodos de pago</field>
         <field name="res_model">upocafe.payment_method</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_upocafe_payment_methods_tree"/>
+        <field name="view_mode">tree,form,graph</field>
+        <field name="view_id" ref="view_upocafe_payment_methods_tree" />
     </record>
 
-
-    <menuitem id="menu_upocafe_payment_methods" name="Métodos de pago" parent="menu_upocafe_payments_main" action="action_upocafe_payment_methods"/>
 </odoo>

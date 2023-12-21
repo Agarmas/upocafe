@@ -20,23 +20,23 @@
 
     # always loaded
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
-        'reports/repositions_report.xml',
-        'reports/providers_report.xml',
         'reports/payments_report.xml',
+        'reports/repositions_report.xml',
         'reports/reports.xml',
-        'views/menu.xml',
-        'views/clients_views.xml',
-        'views/providers_views.xml',
         'views/products_views.xml',
         'views/payments_views.xml',
         'views/payment_methods_views.xml',
         'views/cancelations_views.xml',
         'views/machines_views.xml',
         'views/reparations_views.xml',
-        'views/repositions_views.xml',
         'views/employees_views.xml',
         'views/status_views.xml',
+        'views/repositions_views.xml',
+        'views/providers_views.xml',
+        'views/clients_views.xml',
+        'views/menu.xml'
     ],
     
     # only loaded in demonstration mode

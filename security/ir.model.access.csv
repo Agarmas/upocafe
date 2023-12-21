@@ -10,5 +10,3 @@ access_upocafe_reparation,access.upocafe.reparation,upocafe.model_upocafe_repara
 access_upocafe_machine,access.upocafe.machine,upocafe.model_upocafe_machine,base.group_user,1,1,1,1
 access_upocafe_status,access.upocafe.status,upocafe.model_upocafe_status,base.group_user,1,1,1,1
 access_hr_employee,access.hr.employee,hr.model_hr_employee,base.group_user,1,1,1,1
-access_res_partner,access.res.partner,base.model_res_partner,base.group_user,1,1,1,1
-access_res_company,access.res.company,base.model_res_company,base.group_user,1,1,1,1

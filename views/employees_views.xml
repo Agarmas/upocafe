@@ -1,9 +1,9 @@
 <odoo>
+
     <record id="action_upocafe_employee" model="ir.actions.act_window">
         <field name="name">Empleados</field>
         <field name="res_model">hr.employee</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_upocafe_employee" name="Empleados" parent="menu_upocafe" action="action_upocafe_employee"/>
 </odoo>
