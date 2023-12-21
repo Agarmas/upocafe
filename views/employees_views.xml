@@ -1,4 +1,5 @@
 <odoo>
+
     <record id="action_upocafe_employee" model="ir.actions.act_window">
         <field name="name">Empleados</field>
         <field name="res_model">hr.employee</field>

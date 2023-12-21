@@ -1,13 +1,16 @@
 <odoo>
+
     <record id="view_upocafe_reparations_tree" model="ir.ui.view">
         <field name="name">upocafe.reparation.tree</field>
         <field name="model">upocafe.reparation</field>
         <field name="arch" type="xml">
             <tree string="Reparación">
-                <field name="init_datetime"/>
-		    <field name="fini_datetime"/>
-                <field name="repair_summary"/>
-		    <field name="repair_description"/>
+                <field name="machine_id" widget="many2one" />
+                <field name="name" />
+                <field name="description" />
+                <field name="started" />
+                <field name="ended" />
+                <field name="employee_ids" />
             </tree>
         </field>
     </record>
@@ -18,21 +21,54 @@
         <field name="arch" type="xml">
             <form string="Reparación">
                 <sheet>
-                    <group>
-                        <field name="init_datetime"/>
-                        <field name="fini_datetime"/>
-                        <field name="repair_summary"/>
-                        <field name="repair_description"/>
+                    <group name="name" string="Resumen">
+                        <field name="machine_id" widget="many2one"
+                            string="Máquina afectada" />
+                        <field name="name" />
                     </group>
+                    <group name="details" string="Detalles">
+                        <field name="started" readonly="1" />
+                        <field name="ended" readonly="1" />
+                    </group>
+                    <notebook>
+                        <page name="personel" string="Personal involucrado">
+                            <group>
+                                <field name="employee_ids" />
+                            </group>
+                        </page>
+                        <page name="tecnical" string="Descripción técnica">
+                            <group>
+                                <field name="description" />
+                            </group>
+                        </page>
+                    </notebook>
+                    <newline></newline>
+                    <button name="btn_end_reparation"
+                        string="Finaliza reparación"
+                        type="object" class="oe_highlight" />
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="view_upocafe_reparations_calendar" model="ir.ui.view">
+        <field name="name">upocafe.reparation.calendar</field>
+        <field name="model">upocafe.reparation</field>
+        <field name="arch" type="xml">
+            <calendar string="Reparaciones" color="machine_id"
+                date_start="started" date_stop="ended" mode="month">
+                <field name="machine_id" widget="many2one" />
+                <field name="name" />
+                <field name="employee_ids" />
+            </calendar>
         </field>
     </record>
 
     <record id="action_upocafe_reparations" model="ir.actions.act_window">
         <field name="name">Reparaciones</field>
         <field name="res_model">upocafe.reparation</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_upocafe_reparations_tree"/>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_id" ref="view_upocafe_reparations_tree" />
     </record>
+
 </odoo>

@@ -8,24 +8,45 @@
                     <table style="width:100%; border-collapse: collapse; border: 1px solid #ddd;">
                         <thead>
                             <tr>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Fecha</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Metodo de Pago</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Cliente</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Moneda</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Cancelacion</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Modelo de la maquina</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Monto</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Fecha</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Metodo
+                                    de Pago</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Cliente</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Moneda</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Cancelacion</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Modelo
+                                    de la maquina</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Monto</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.date" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.payment_method_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.partner_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.currency_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.cancelation_id.name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.machine_id.model_name" /></td>
-                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="doc.amount" /></td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.date" />
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.payment_method_id.name" />
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.partner_id.name" />
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.currency_id.name" />
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.cancelation_id.name" />
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.machine_id.name" />
+                                </td>
+                                <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    <p t-field="doc.amount" />
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -34,19 +55,36 @@
                     <table style="width:100%; border-collapse: collapse; border: 1px solid #ddd;">
                         <thead>
                             <tr>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Producto</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Cantidad</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Precio Unitario</th>
-                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Subtotal</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Producto</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Cantidad</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Precio
+                                    Unitario</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                    Subtotal</th>
                             </tr>
                         </thead>
                         <tbody>
                             <t t-foreach="doc.production_ids" t-as="production">
                                 <tr>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_id.name" /></td>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_qty" /></td>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_id.lst_price" /></td>
-                                    <td style="border: 1px solid #ddd; padding: 8px; text-align: left;"><t t-esc="production.product_qty * production.product_id.lst_price" /></td>
+                                    <td
+                                        style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                        <p t-field="production.product_id.name" />
+                                    </td>
+                                    <td
+                                        style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                        <p t-field="production.product_qty" />
+                                    </td>
+                                    <td
+                                        style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                        <p t-field="production.product_id.lst_price" />
+                                    </td>
+                                    <td
+                                        style="border: 1px solid #ddd; padding: 8px; text-align: left;">
+                                        <t
+                                            t-esc="production.product_qty * production.product_id.lst_price" />
+                                    </td>
                                 </tr>
                             </t>
                         </tbody>

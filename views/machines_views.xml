@@ -9,6 +9,7 @@
                 <field name="location" />
                 <field name="create_date" />
                 <field name="status_id" />
+                <field name="repositions_ids" />
                 <field name="reparations_ids" />
                 <field name="payments_ids" />
                 <field name="products_ids"/>
@@ -27,6 +28,7 @@
                         <field name="location" />
                         <field name="create_date" />
                         <field name="status_id" />
+                        <field name="repositions_ids" />
                         <field name="reparations_ids" />
                         <field name="payments_ids" />
                         <field name="products_ids"/>

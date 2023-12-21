@@ -23,6 +23,8 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'reports/payments_report.xml',
+        'reports/machines_report.xml',
+        'reports/repositions_report.xml',
         'reports/reports.xml',
         'views/products_views.xml',
         'views/payments_views.xml',
@@ -32,6 +34,9 @@
         'views/reparations_views.xml',
         'views/employees_views.xml',
         'views/status_views.xml',
+        'views/repositions_views.xml',
+        'views/providers_views.xml',
+        'views/clients_views.xml',
         'views/menu.xml'
     ],
     
