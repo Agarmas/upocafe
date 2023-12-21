@@ -11,4 +11,13 @@
         <field name="binding_model_id" ref="upocafe.model_upocafe_payment" />
         <field name="binding_type">report</field>
     </record>
+
+    <record id="report_upocafe_reparation_report" model="ir.actions.report">
+        <field name="name">Informe de reparaciones</field>
+        <field name="model">upocafe.reparation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">upocafe.upocafe_reparations_template</field>
+        <field name="binding_model_id" ref="upocafe.model_upocafe_reparation" />
+        <field name="binding_type">report</field>
+    </record>
 </odoo>
