@@ -22,6 +22,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'reports/payments_report.xml',
+        'reports/machines_report.xml',
         'reports/reparations_report.xml',
         'reports/repositions_report.xml',
         'reports/reports.xml',

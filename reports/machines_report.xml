@@ -1,0 +1,70 @@
+<odoo>
+    <template id="upocafe_machines_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">                    <!-- Probad tambien con web.internal_layout -->
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 24px; margin-bottom: 20px;">
+                            <span style="font-weight: bold; ">Nombre: </span>
+                            <span style="color: #999999;" t-field="o.name" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <strong>Ubicación: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Fecha: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Estado: </strong>
+                                            </p>
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <p t-field="o.location" />
+                                            <p t-field="o.create_date" />
+                                            <p t-field="o.status_id" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div t-if="o.products_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Productos de la máquina <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.products_ids" id="productos" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Peso</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.products_ids" t-as="producto">
+                                        <tr>
+                                            <td>
+                                                <p t-field="producto.name" />
+                                            </td>
+                                            <td>
+                                                <p t-field="producto.weight" />
+                                            </td>
+                                            <td>
+                                                <p t-field="producto.list_price" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

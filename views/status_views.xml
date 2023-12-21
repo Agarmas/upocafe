@@ -5,7 +5,8 @@
         <field name="model">upocafe.status</field>
         <field name="arch" type="xml">
             <tree string="Estados de una maquina">
-                <field name="status" />
+                <field name="name"/>
+                <field name="machines_ids"/>
             </tree>
         </field>
     </record>
@@ -17,7 +18,11 @@
             <form string="Estados de una maquina">
                 <sheet>
                     <group>
-                        <field name="status" />
+                        <field name="name"/>
+                        <newline></newline>
+                        <button name="btn_status_to_activo" string="Activo" type="object" class="oe_highlight" />
+                        <button name="btn_status_to_averiado" string="Averiado" type="object" class="oe_highlight" />
+                        <button name="btn_status_to_reparacion" string="En reparacion" type="object" class="oe_highlight" />
                     </group>
                 </sheet>
             </form>

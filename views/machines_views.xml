@@ -5,13 +5,14 @@
         <field name="model">upocafe.machine</field>
         <field name="arch" type="xml">
             <tree string="Maquinas de cafe">
-                <field name="name"/>
-                <field name="location"/>
+                <field name="name" />
+                <field name="location" />
                 <field name="create_date" />
                 <field name="status_id" />
+                <field name="repositions_ids" />
                 <field name="reparations_ids" />
                 <field name="payments_ids" />
-                <field name="products_ids" />
+                <field name="products_ids"/>
             </tree>
         </field>
     </record>
@@ -26,20 +27,47 @@
                         <field name="name" />
                         <field name="location" />
                         <field name="create_date" />
-                        <field name="status_id" readonly="1" />
-                        <field name="reparations_ids" readonly="1" />
-                        <field name="payments_ids" readonly="1" />
-                        <field name="products_ids" readonly="1" />
+                        <field name="status_id" />
+                        <field name="repositions_ids" />
+                        <field name="reparations_ids" />
+                        <field name="payments_ids" />
+                        <field name="products_ids"/>
+                        <newline></newline>
+                        <button name="btn_setDate" string="Establecer fecha" type="object" class="oe_highlight" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <record id="upocafe_machine_calendar_view" model="ir.ui.view">
+        <field name="name">upocafe.machine.calendar</field>
+        <field name="model">upocafe.machine</field>
+        <field name="arch" type="xml">
+        <calendar string="Máquinas de café" color="status_id" date_start="create_date" mode="month">
+            <field name="name" />
+            <field name="location" />
+        </calendar>
+        </field>
+    </record>
+
+    <record id="upocafe_machine_search_view" model="ir.ui.view">
+    <field name="name">upocafe.machine.search</field>
+    <field name="model">upocafe.machine</field>
+    <field name="arch" type="xml">
+      <search>
+        <group expand="0" string="Agrupar por...">
+          <filter name="group_by_state" string="Estado" context="{'group_by':'status_id'}" />
+          <filter name="group_by_location" string="Localizacion" context="{'group_by':'location'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+
     <record id="action_upocafe_machine" model="ir.actions.act_window">
-        <field name="name">Maquinas de café</field>
+        <field name="name">Máquinas de café</field>
         <field name="res_model">upocafe.machine</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="view_upocafe_machine_tree"/>
     </record>
     
