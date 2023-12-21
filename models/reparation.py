@@ -7,7 +7,7 @@ class Reparation(models.Model):
 
      name = fields.Text(required=True, string='Resumen', help='Resumen de la causa de la reparación')
      description = fields.Text(string='Descripción técnica', help='Descripción de la causa de la reparación para los empleados involucrados')
-     started = fields.Datetime(default=fields.Datetime.now, required=True, string='Comenzada', help='Fecha de inicio de la reparación')
+     started = fields.Datetime(default=fields.Datetime.now(), required=True, string='Comenzada', help='Fecha de inicio de la reparación')
      ended = fields.Datetime(string='Finalizada', help='Fecha de finalización de la reparación')
      machine_id = fields.Many2one('upocafe.machine', required=True, string='Máquina', help='Máquina afectada por la reparación')
      employee_ids = fields.Many2many('hr.employee', required=True, string='Empleados', help='Empleados involucrados')
@@ -26,4 +26,5 @@ class Reparation(models.Model):
 
      def btn_end_reparation(self):
           if not self.ended:
-               self.write({'ended': fields.Datetime.now})
+               now = fields.Datetime.now()
+               self.write({'ended': now})
