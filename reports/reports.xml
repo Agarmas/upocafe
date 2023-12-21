@@ -8,7 +8,7 @@
         <field name="model">upocafe.payment</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">upocafe.upocafe_payments_template</field>
-        <field name="binding_model_id" ref="upocafe.model_upocafe_payment"/>
+        <field name="binding_model_id" ref="upocafe.model_upocafe_payment" />
         <field name="binding_type">report</field>
     </record>
 </odoo>
